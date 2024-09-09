@@ -4,8 +4,8 @@ class Product(models.Model):
     name = models.CharField(max_length=255)
     price = models.IntegerField()
     description = models.TextField()
+    category = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='products')
     
 
-    @property
-    def is_mood_strong(self):
-        return self.mood_intensity > 5
+    
