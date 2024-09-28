@@ -25,7 +25,7 @@ def show_main(request):
         'description': 'A brand new Barcelona jersey of legendary player Lionel Messi',
         'category': 'Jersey',
         'product_entries': product_entries,
-        'last_login': request.COOKIES['last_login'],
+        'last_login': request.COOKIES['last_login'], #fixed
     }
 
     return render(request, "main.html", context)
