@@ -1,0 +1,16 @@
+<div class="bg-white shadow-md rounded-lg overflow-hidden">
+  <div class="p-4">
+    <h3 class="text-lg font-semibold text-gray-800">{{ product_entry.name }}</h3>
+    <p class="text-gray-600">Price: IDR{{ product_entry.price }}</p>
+    <p class="text-gray-500">Category: {{ product_entry.category }}</p>
+    <p class="mt-2 text-gray-700">{{ product_entry.description }}</p>
+  </div>
+  <div class="flex justify-end p-4 bg-gray-300">
+    <a href="{% url 'main:edit_product' product_entry.id %}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded transition duration-300">
+      Edit
+    </a>
+    <a href="{% url 'main:delete_product' product_entry.id %}" class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded transition duration-300 ml-2">
+      Delete
+    </a>
+  </div>
+</div>

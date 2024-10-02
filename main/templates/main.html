@@ -1,55 +1,42 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Mental Health Tracker</title>
+{% endblock meta %}
 {% block content %}
+{% include 'navbar.html' %}
+<div class="overflow-x-hidden px-4 md:px-8 pb-8 pt-24 min-h-screen bg-gray-100 flex flex-col" id="background-home">
+  <div class="p-2 mb-6 relative">
+    <div class="relative grid grid-cols-1 z-30 md:grid-cols-2 gap-8">
+      {% include "card_info.html" with title='Name' value=user.username %}
+      {% include "card_info.html" with title='Class' value=class %}
+    </div>
+  </div>
 
-<h5>App Name: </h5>
-<p>{{ app_name }}</p>
-<h5>Name: </h5>
-<p>{{ name }}</p>
-<h5>Class: </h5>
-<p>{{ class }}</p>
-<h5>Product Name: </h5>
-<p>{{ product_name }}</p>
-<h5>Price: </h5>
-<p>{{ price }}</p>
-<h5>Description: </h5>
-<p>{{ description }}</p>
-<h5>Category: </h5>
-<p>{{ category }}</p>
+  <div class="px-3 mb-4">
+    <div class="flex rounded-md items-center bg-teal-600 py-2 px-4 w-fit">
+      <h1 class="text-white text-center">Last Login: {{ user.last_login|date:"Y-m-d H:i:s" }}</h1>
+    </div>
+  </div>
 
-{% if not product_entries %}
-<p>No data of product.</p>
-{% else %}
-<table>
-    <tr>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Description</th>
-    <th>Category</th>
-    </tr>
+  <div class="flex justify-end mb-8 mt-10">
+    <a href="{% url 'main:create_product' %}" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+      Add New Product
+    </a>
+  </div>
 
-    {% comment %} Berikut cara memperlihatkan data mood di bawah baris ini 
-    {% endcomment %} 
+  {% if not product_entries %}
+  <div class="flex flex-col items-center justify-center min-h-[24rem] p-6">
+    <img src="{% static 'image/sedih-banget.png' %}" alt="Sad face" class="w-32 h-32 mb-4"/>
+    <p class="text-center text-gray-600 mt-4">No product data yet.</p>
+  </div>
+  {% else %}
+  <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 w-full mt-10">
     {% for product_entry in product_entries %}
-    <tr>
-    <td>{{product_entry.name}}</td>
-    <td>{{product_entry.price}}</td>
-    <td>{{product_entry.description}}</td>
-    <td>{{product_entry.category}}</td>
-    </tr>
+        {% include 'card_product.html' with product_entry=product_entry %}
     {% endfor %}
-</table>
-{% endif %}
-
-<br />
-
-<a href="{% url 'main:create_product' %}">
-    <button>Buy New Product</button>
-</a>
-
-<a href="{% url 'main:logout' %}">
-  <button>Logout</button>
-</a>
-
-<h5>Last session: {{ last_login }}</h5>
-
+  </div>
+  {% endif %}
+</div>
 {% endblock content %}
