@@ -188,42 +188,75 @@
                     <img src="json_by_id.png" alt="JSON by ID">
                 </div>
         </details>
+        <details>
+        <summary>Tugas 4</summary>
+            <div>
+                <h2>1. Apa perbedaan antara HttpResponseRedirect() dan redirect()?</h2>
+                <p align="justify">HttpResponseRedirect() hanya bisa menerima argumen dalam bentuk URL sementara redirect() bisa menerima argumen berupa model, view, atau URL juga. Fungsi mereka sama, yaitu untuk <i>redirect</i> ke halaman lain.
+                </p>
+            </div>
+            <div>
+                <h2>2. Jelaskan cara kerja penghubungan model Product dengan User!</h2>
+                <p align="justify">Setiap Product akan dihubungkan dengan User yang menggunakan Product tersebut. Hubungan ini dilakukan melalui sebuah relationship, di mana sebuah Product pasti terasosiasikan dengan seorang User. Dalam proyek ini, seorang User hanya bisa melihat Product yang telah Ia beli.
+                </p>
+            </div>
+            <div>
+                <h2>3. Apa perbedaan antara authentication dan authorization, apakah yang dilakukan saat pengguna login? Jelaskan bagaimana Django mengimplementasikan kedua konsep tersebut.</h2>
+                <p align="justify">Authentication adalah pengecekan identitas user. Sementara itu, authorization adalah proses pemeriksaan hak user tersebut. Untuk proses login, proses yang digunakan adalah authentication, karena mengecek apakah username dan password sudah benar dan ada di database. Dalam Django, kita bisa dengan mudah mengimplementasikan konsep authentication karena bisa mengimport authenticate dan login ke program kita. Dengan menggunakan fungsi authenticate() kita bisa memverifikasi identitas user. Untuk mengimplementasikan konsep authorization, Django juga telah memberikan decorators seperti "@login_required" yang sudah saya pakai di program.
+                </p>
+            </div>
+            <div>
+                <h2>4. Bagaimana Django mengingat pengguna yang telah login? Jelaskan kegunaan lain dari cookies dan apakah semua cookies aman digunakan?</h2>
+                <p align="justify">Django mengingat pengguna yang telah login menggunakan <i>cookies</i>. Cookies menyimpan session ID seorang user dan akan menggunakannya untuk mencari tahu apakah user masih terlogin secara valid atau tidak. Kegunaan lain dari cookies adalah untuk menyimpan preferensi setiap user dan untuk mengumpulkan data dari user sebagai feedback. Tapi, tidak semua cookies aman digunakan. Contohnya, cookies yang memiliki jangka waktu yang panjang dapat meningkatkan risiko keamanan karena user bisa tidak menyadari bahwa mereka masih terlogin. 
+                </p>
+            </div>
+            <div>
+                <h2>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h2>
+                <p align="justify">
+                    <ul>
+                        <li>Membuat fungsi dan form registrasi untuk login. Form ini merupakan <i>built-in function</i> dari Django.</li>
+                        <li>Membuat file HTML baru yang bernama register.html. Ini akan menampilkan konten untuk user meregistrasikan akun mereka nanti.</li>
+                        <li>Membuat fungsi login ke dalam views.py. Fungsi ini berfungsi untuk mengautentikasi pengguna yang ingin login.</li>
+                        <li>Di direktori main/templates, saya membuat file HTML baru bernama login.html. Ini akan menjadi tampilan default saat masuk ke URL toko (juga dipakai untuk login).</li>
+                        <li>Membuat fungsi logout di views.py. Fungsi ini berfungsi untuk melakukan mekanisme logout.</li>
+                        <li>Dalam file main.html, saya membuat button untuk logout</li>
+                        <li>Next, saya menambahkan dekorator "@login_required" di atas fungsi show_main agar user yang dapat mengakses bagian tersebut hanya user yang telah berhasil melakukan proses login.</li>
+                        <li>Lalu, saya menambahkan data last login pada fungsi login_user dan menampilkannya di halaman web.</li>
+                        <li>Saya juga menambahkan variabel last_login dalam fungsi show_main di dalam context.</li>
+                        <li>Saya menghubungkan model Product dengan User menggunakan ForeignKey</li>
+                        <li>Setelah itu, saya menyimpan perubahan dengan menjalankan command "python manage.py makemigrations" dan "python manage.py migrate".</li>
+                        <li>Untuk langkah terakhir, saya menambahkan 3 data kepada setiap user yang telah saya daftarkan (sesuai ketentuan tugas)</li>
+            </details>
     </details>
     <div>
-        <h2>1. Apa perbedaan antara HttpResponseRedirect() dan redirect()?</h2>
-        <p align="justify">HttpResponseRedirect() hanya bisa menerima argumen dalam bentuk URL sementara redirect() bisa menerima argumen berupa model, view, atau URL juga. Fungsi mereka sama, yaitu untuk <i>redirect</i> ke halaman lain.
+        <h2>1. Jika terdapat beberapa CSS selector untuk suatu elemen HTML, jelaskan urutan prioritas pengambilan CSS selector tersebut!</h2>
+        <p align="justify">Urutan prioritas pengambilan CSS selector tersebut adalah:
+            <ol>
+                <li>Inline style</li>
+                <li>External dan internal style sheets</li>
+                <li>Browser default</li>
+            </ol>
         </p>
-    </div>
-    <div>
-        <h2>2. Jelaskan cara kerja penghubungan model Product dengan User!</h2>
-        <p align="justify">Setiap Product akan dihubungkan dengan User yang menggunakan Product tersebut. Hubungan ini dilakukan melalui sebuah relationship, di mana sebuah Product pasti terasosiasikan dengan seorang User. Dalam proyek ini, seorang User hanya bisa melihat Product yang telah Ia beli.
-        </p>
-    </div>
-    <div>
-        <h2>3. Apa perbedaan antara authentication dan authorization, apakah yang dilakukan saat pengguna login? Jelaskan bagaimana Django mengimplementasikan kedua konsep tersebut.</h2>
-        <p align="justify">Authentication adalah pengecekan identitas user. Sementara itu, authorization adalah proses pemeriksaan hak user tersebut. Untuk proses login, proses yang digunakan adalah authentication, karena mengecek apakah username dan password sudah benar dan ada di database. Dalam Django, kita bisa dengan mudah mengimplementasikan konsep authentication karena bisa mengimport authenticate dan login ke program kita. Dengan menggunakan fungsi authenticate() kita bisa memverifikasi identitas user. Untuk mengimplementasikan konsep authorization, Django juga telah memberikan decorators seperti "@login_required" yang sudah saya pakai di program.
-        </p>
-    </div>
-    <div>
-        <h2>4. Bagaimana Django mengingat pengguna yang telah login? Jelaskan kegunaan lain dari cookies dan apakah semua cookies aman digunakan?</h2>
-        <p align="justify">Django mengingat pengguna yang telah login menggunakan <i>cookies</i>. Cookies menyimpan session ID seorang user dan akan menggunakannya untuk mencari tahu apakah user masih terlogin secara valid atau tidak. Kegunaan lain dari cookies adalah untuk menyimpan preferensi setiap user dan untuk mengumpulkan data dari user sebagai feedback. Tapi, tidak semua cookies aman digunakan. Contohnya, cookies yang memiliki jangka waktu yang panjang dapat meningkatkan risiko keamanan karena user bisa tidak menyadari bahwa mereka masih terlogin. 
-        </p>
-    </div>
-    <div>
-        <h2>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h2>
+        <h2>2. Mengapa responsive design menjadi konsep yang penting dalam pengembangan aplikasi web? Berikan contoh aplikasi yang sudah dan belum menerapkan responsive design!</h2>
+        <p align="justify">Karena dengan responsive design, developer bisa terbantu karena dapat menggunakan satu design untuk semua perangkat (mobile dan desktop). Responsive web design juga membuat user experience menjadi lebih baik. Contoh aplikasi yang telah menerapkan responsive design adalah website apple (apple.com) dan contoh yang belum menerapkan responsive web design adalah website perusahaan tua.</p>
+        <h2>3.  Jelaskan perbedaan antara margin, border, dan padding, serta cara untuk mengimplementasikan ketiga hal tersebut!</h2>
+        <p align="justify"> Margin adalah ruang di luar elemen yang berfungsi untuk memisahkan elemen tersebut dari elemen lain di sekitarnya. Border adalah garis yang mengelilingi elemen, memberikan batas visual yang membedakan elemen dari latar belakang. Sementara itu, padding adalah ruang di dalam elemen, antara konten elemen dan batasnya, yang memberi jarak agar konten tidak langsung bersentuhan dengan batas elemen. Implementasinya bisa digunakan dalam file CSS.</p>
+        <h2>4.  Jelaskan konsep flex box dan grid layout beserta kegunaannya!</h2>
+        <p align="justify">Flexbox (Flexible Box) dirancang untuk satu dimensi, memungkinkan pengaturan elemen dalam baris atau kolom secara fleksibel, sehingga memudahkan penyesuaian ukuran dan posisi elemen berdasarkan ruang yang tersedia. Ini sangat berguna untuk membuat antarmuka yang responsif, seperti menu navigasi atau kumpulan tombol. Sementara itu, grid layout memungkinkan pengaturan elemen dalam dua dimensi, baik baris maupun kolom, dengan menyediakan sistem grid yang lebih kompleks.</p>
+        <h2>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!</h2>
         <p align="justify">
             <ul>
-                <li>Membuat fungsi dan form registrasi untuk login. Form ini merupakan <i>built-in function</i> dari Django.</li>
-                <li>Membuat file HTML baru yang bernama register.html. Ini akan menampilkan konten untuk user meregistrasikan akun mereka nanti.</li>
-                <li>Membuat fungsi login ke dalam views.py. Fungsi ini berfungsi untuk mengautentikasi pengguna yang ingin login.</li>
-                <li>Di direktori main/templates, saya membuat file HTML baru bernama login.html. Ini akan menjadi tampilan default saat masuk ke URL toko (juga dipakai untuk login).</li>
-                <li>Membuat fungsi logout di views.py. Fungsi ini berfungsi untuk melakukan mekanisme logout.</li>
-                <li>Dalam file main.html, saya membuat button untuk logout</li>
-                <li>Next, saya menambahkan dekorator "@login_required" di atas fungsi show_main agar user yang dapat mengakses bagian tersebut hanya user yang telah berhasil melakukan proses login.</li>
-                <li>Lalu, saya menambahkan data last login pada fungsi login_user dan menampilkannya di halaman web.</li>
-                <li>Saya juga menambahkan variabel last_login dalam fungsi show_main di dalam context.</li>
-                <li>Saya menghubungkan model Product dengan User menggunakan ForeignKey</li>
-                <li>Setelah itu, saya menyimpan perubahan dengan menjalankan command "python manage.py makemigrations" dan "python manage.py migrate".</li>
-                <li>Untuk langkah terakhir, saya menambahkan 3 data kepada setiap user yang telah saya daftarkan (sesuai ketentuan tugas)</li>
+                <li>Saya membuat fungsi edit product yang akan mengizinkan user untuk mengedit sebuah produk yang sudah ada</li>
+                <li>Saya membuat fungsi delete product untuk menghapus produk yang sebelumnya sudah ditambahkan</li>
+                <li>Setelah itu, saya menambahkan tailwind CSS ke dalam program saya</li>
+                <li>Dalam templates, saya membuat file baru bernama navbar.html. File ini digunakan untuk menampung kode yang akan menjadi navbar website saya nantinya</li>
+                <li>Selanjutnya, saya mengkonfigurasi static files dalam settings.py</li>
+                <li>Saya membuat folder static</li>
+                <li>Dalam folder static, saya membuat folder image dan mengisinya dengan gambar-gambar yang akan saya gunakan di website saya</li>
+                <li>Saya juga membuat folder video yang akan menampung video-video yang akan saya gunakan di website saya</li>
+                <li>Saya membuat file global.css yang akan berisi kode CSS saya</li>
+                <li>Saya menghubungkan global.css ke dalam file base.html</li>
+                <li>Lalu, saya mendekorasi website saya</li>
+            </ul>
     
 <h2>THE END🙏</h2>
