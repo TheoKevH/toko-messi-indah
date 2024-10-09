@@ -1,4 +1,10 @@
 <h1><b>HI! Welcome to Toko Messi Indah🤩😎</b></h1>
+<h2>URL WEBSITE</h2>
+<div>
+https://theodore-kevin-tokomessiindah.pbp.cs.ui.ac.id/
+
+<h2>Past Assignments</h2>
+</div>
 <details>
     <summary>Tugas Sebelumnya</summary>
     <details>
@@ -227,36 +233,78 @@
                         <li>Setelah itu, saya menyimpan perubahan dengan menjalankan command "python manage.py makemigrations" dan "python manage.py migrate".</li>
                         <li>Untuk langkah terakhir, saya menambahkan 3 data kepada setiap user yang telah saya daftarkan (sesuai ketentuan tugas)</li>
             </details>
+            <details>
+        <summary>Tugas 5</summary>
+        <div>
+            <h2>1. Jika terdapat beberapa CSS selector untuk suatu elemen HTML, jelaskan urutan prioritas pengambilan CSS selector tersebut!</h2>
+            <p align="justify">Urutan prioritas pengambilan CSS selector tersebut adalah:
+                <ol>
+                    <li>Inline style</li>
+                    <li>External dan internal style sheets</li>
+                    <li>Browser default</li>
+                </ol>
+            </p>
+            <h2>2. Mengapa responsive design menjadi konsep yang penting dalam pengembangan aplikasi web? Berikan contoh aplikasi yang sudah dan belum menerapkan responsive design!</h2>
+            <p align="justify">Karena dengan responsive design, developer bisa terbantu karena dapat menggunakan satu design untuk semua perangkat (mobile dan desktop). Responsive web design juga membuat user experience menjadi lebih baik. Contoh aplikasi yang telah menerapkan responsive design adalah website apple (apple.com) dan contoh yang belum menerapkan responsive web design adalah website perusahaan tua.</p>
+            <h2>3.  Jelaskan perbedaan antara margin, border, dan padding, serta cara untuk mengimplementasikan ketiga hal tersebut!</h2>
+            <p align="justify"> Margin adalah ruang di luar elemen yang berfungsi untuk memisahkan elemen tersebut dari elemen lain di sekitarnya. Border adalah garis yang mengelilingi elemen, memberikan batas visual yang membedakan elemen dari latar belakang. Sementara itu, padding adalah ruang di dalam elemen, antara konten elemen dan batasnya, yang memberi jarak agar konten tidak langsung bersentuhan dengan batas elemen. Implementasinya bisa digunakan dalam file CSS.</p>
+            <h2>4.  Jelaskan konsep flex box dan grid layout beserta kegunaannya!</h2>
+            <p align="justify">Flexbox (Flexible Box) dirancang untuk satu dimensi, memungkinkan pengaturan elemen dalam baris atau kolom secara fleksibel, sehingga memudahkan penyesuaian ukuran dan posisi elemen berdasarkan ruang yang tersedia. Ini sangat berguna untuk membuat antarmuka yang responsif, seperti menu navigasi atau kumpulan tombol. Sementara itu, grid layout memungkinkan pengaturan elemen dalam dua dimensi, baik baris maupun kolom, dengan menyediakan sistem grid yang lebih kompleks.</p>
+            <h2>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!</h2>
+            <p align="justify">
+                <ul>
+                    <li>Saya membuat fungsi edit product yang akan mengizinkan user untuk mengedit sebuah produk yang sudah ada</li>
+                    <li>Saya membuat fungsi delete product untuk menghapus produk yang sebelumnya sudah ditambahkan</li>
+                    <li>Setelah itu, saya menambahkan tailwind CSS ke dalam program saya</li>
+                    <li>Dalam templates, saya membuat file baru bernama navbar.html. File ini digunakan untuk menampung kode yang akan menjadi navbar website saya nantinya</li>
+                    <li>Selanjutnya, saya mengkonfigurasi static files dalam settings.py</li>
+                    <li>Saya membuat folder static</li>
+                    <li>Dalam folder static, saya membuat folder image dan mengisinya dengan gambar-gambar yang akan saya gunakan di website saya</li>
+                    <li>Saya juga membuat folder video yang akan menampung video-video yang akan saya gunakan di website saya</li>
+                    <li>Saya membuat file global.css yang akan berisi kode CSS saya</li>
+                    <li>Saya menghubungkan global.css ke dalam file base.html</li>
+                    <li>Lalu, saya mendekorasi website saya</li>
+                </ul>
+        </details>
     </details>
     <div>
-        <h2>1. Jika terdapat beberapa CSS selector untuk suatu elemen HTML, jelaskan urutan prioritas pengambilan CSS selector tersebut!</h2>
-        <p align="justify">Urutan prioritas pengambilan CSS selector tersebut adalah:
-            <ol>
-                <li>Inline style</li>
-                <li>External dan internal style sheets</li>
-                <li>Browser default</li>
-            </ol>
-        </p>
-        <h2>2. Mengapa responsive design menjadi konsep yang penting dalam pengembangan aplikasi web? Berikan contoh aplikasi yang sudah dan belum menerapkan responsive design!</h2>
-        <p align="justify">Karena dengan responsive design, developer bisa terbantu karena dapat menggunakan satu design untuk semua perangkat (mobile dan desktop). Responsive web design juga membuat user experience menjadi lebih baik. Contoh aplikasi yang telah menerapkan responsive design adalah website apple (apple.com) dan contoh yang belum menerapkan responsive web design adalah website perusahaan tua.</p>
-        <h2>3.  Jelaskan perbedaan antara margin, border, dan padding, serta cara untuk mengimplementasikan ketiga hal tersebut!</h2>
-        <p align="justify"> Margin adalah ruang di luar elemen yang berfungsi untuk memisahkan elemen tersebut dari elemen lain di sekitarnya. Border adalah garis yang mengelilingi elemen, memberikan batas visual yang membedakan elemen dari latar belakang. Sementara itu, padding adalah ruang di dalam elemen, antara konten elemen dan batasnya, yang memberi jarak agar konten tidak langsung bersentuhan dengan batas elemen. Implementasinya bisa digunakan dalam file CSS.</p>
-        <h2>4.  Jelaskan konsep flex box dan grid layout beserta kegunaannya!</h2>
-        <p align="justify">Flexbox (Flexible Box) dirancang untuk satu dimensi, memungkinkan pengaturan elemen dalam baris atau kolom secara fleksibel, sehingga memudahkan penyesuaian ukuran dan posisi elemen berdasarkan ruang yang tersedia. Ini sangat berguna untuk membuat antarmuka yang responsif, seperti menu navigasi atau kumpulan tombol. Sementara itu, grid layout memungkinkan pengaturan elemen dalam dua dimensi, baik baris maupun kolom, dengan menyediakan sistem grid yang lebih kompleks.</p>
+        <h2>1.  Jelaskan manfaat dari penggunaan JavaScript dalam pengembangan aplikasi web!</h2>
+        <p align="justify">Menurut saya, JavaScript memiliki banyak manfaat dalam pengembangan website, terutama karena kemampuannya untuk membuat halaman web interaktif dan dinamis. Dengan JavaScript, kita bisa mengubah elemen HTML dan CSS secara real-time tanpa perlu me-reload seluruh halaman, yang meningkatkan pengalaman pengguna. Selain itu, JavaScript memungkinkan validasi data di sisi klien dan pengiriman data asinkron dengan AJAX.</p>
+    </div>
+    <div>
+        <h2>2. Jelaskan fungsi dari penggunaan await ketika kita menggunakan fetch()! Apa yang akan terjadi jika kita tidak menggunakan await?</h2>
+        <p align="justify">Fungsi dari penggunaan await yaitu untuk menunggu hasil dari operasi asynchronous sebelum melanjutkan ke instruksi berikutnya. Dalam konteks fetch(), await digunakan agar JavaScript menunggu sampai respons dari server selesai sebelum memproses data lebih lanjut. Jika tidak ada await, JavaScript akan melanjutkan eksekusi instruksi berikutnya tanpa menunggu fetch() selesai, sehingga data yang digunakan bukanlah data terbaru sesuai keinginan user.</p>
+    </div>
+    <div>
+        <h2>3.  Mengapa kita perlu menggunakan decorator csrf_exempt pada view yang akan digunakan untuk AJAX POST?</h2>
+        <p align="justify">Penggunaan csrf_exempt diperlukan untuk menonaktifkan CSRF pada view tertentu. Kita memerlukan hal tersebut karena ketika menggunakan AJAX POST, token CSRF tidak selalu otomatis ada dalam permintaan, sehingga dalam beberapa kasus seringkali gagal divalidasi. Agar tidak error, bisa memakai decorator csrf_exempt agar dinonaktifkan perlindungan CSRF pada view tersebut. Warningnya adalah kita harus hati-hati dalam menggunakan csrf_exempt. Jangan sampai sembarangan memakai decorator tersebut dan membuat aplikasi menjadi rentan terhadap serangan CSRF.</p>
+    </div>
+    <div>
+        <h2>4. Pada tutorial PBP minggu ini, pembersihan data input pengguna dilakukan di belakang (backend) juga. Mengapa hal tersebut tidak dilakukan di frontend saja?</h2>
+        <p align="justify">Pada sisi frontend memang sudah dilakukan validasi keamanan. Namun, itu tidak cukup aman karena pengguna dapat memodifikasi JavaScript dari sisi client. Dengan dibersihkan datanya di backend, maka kita dapat lebih memastikan bahwa data yang masuk ke server sudah divalidasi dan dibersihkan untuk menghindari berbagai problem keamanan seperti Cross-Site Scripting (XSS). Selain itu, kita juga dapat memastikan bahwa semua data yang masuk sesuai dengan format yang diharapkan.</p>
+    </div>
+    <div>
         <h2>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial)!</h2>
         <p align="justify">
             <ul>
-                <li>Saya membuat fungsi edit product yang akan mengizinkan user untuk mengedit sebuah produk yang sudah ada</li>
-                <li>Saya membuat fungsi delete product untuk menghapus produk yang sebelumnya sudah ditambahkan</li>
-                <li>Setelah itu, saya menambahkan tailwind CSS ke dalam program saya</li>
-                <li>Dalam templates, saya membuat file baru bernama navbar.html. File ini digunakan untuk menampung kode yang akan menjadi navbar website saya nantinya</li>
-                <li>Selanjutnya, saya mengkonfigurasi static files dalam settings.py</li>
-                <li>Saya membuat folder static</li>
-                <li>Dalam folder static, saya membuat folder image dan mengisinya dengan gambar-gambar yang akan saya gunakan di website saya</li>
-                <li>Saya juga membuat folder video yang akan menampung video-video yang akan saya gunakan di website saya</li>
-                <li>Saya membuat file global.css yang akan berisi kode CSS saya</li>
-                <li>Saya menghubungkan global.css ke dalam file base.html</li>
-                <li>Lalu, saya mendekorasi website saya</li>
+                <li>Pertama, saya membuat fungsi untuk membuat product dengan menggunakan AJAX di views.py</li>
+                <li>Masih di views.py, saya menghapus beberapa bagian dari show_main function yang tidak diperlukan, karena saya akan menggunakan async function di main.html menggunakan AJAX.</li>
+                <li>Selanjutnya, saya menambah async function di main.html untuk me-request data ke server menggunakan AJAX.</li>
+                <li>Kemudian, saya membuat tombol baru bertuliskan Add Product (AJAX) di main.html yang akan memunculkan modal ketika di-click.</li>
+                <li>Setelah itu, saya membuat sebuah modal di main.html yang akan muncul ketika tombol Add Product (AJAX) di-click. Modal ini sudah saya sesuaikan dengan theme aplikasi yang saya terapkan.</li>
+                <li>Tidak lupa, saya juga membuat fungsi untuk melakukan close modal ketika tombol X atau Cancel di-click.</li>
+                <li>Terakhir, saya menerapkan fungsi untuk meng-handle submit form produk yang akan dikirimkan ke server menggunakan AJAX.</li>
             </ul>
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+        
     
 <h2>THE END🙏</h2>
