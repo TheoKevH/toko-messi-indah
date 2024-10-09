@@ -1,10 +1,9 @@
 <h1><b>HI! Welcome to Toko Messi Indah🤩😎</b></h1>
 <h2>URL WEBSITE</h2>
-<div>
-https://theodore-kevin-tokomessiindah.pbp.cs.ui.ac.id/
+
+[URL TOKO MESSI INDAH](https://theodore-kevin-tokomessiindah.pbp.cs.ui.ac.id/)
 
 <h2>Past Assignments</h2>
-</div>
 <details>
     <summary>Tugas Sebelumnya</summary>
     <details>
